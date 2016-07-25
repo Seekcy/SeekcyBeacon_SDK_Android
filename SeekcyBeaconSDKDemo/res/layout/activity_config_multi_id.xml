@@ -1,0 +1,959 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="vertical"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="vertical" >
+
+        <TextView
+            android:id="@+id/state_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_world"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <RelativeLayout
+            android:id="@+id/config_rl1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/config_uuid_view1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:text="@string/UUID1"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/config_uuid1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@id/config_uuid_view1"
+                android:hint="@string/UUIDHint"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/config_uuid_spinner1"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/config_rl2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/config_major_view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/Major1"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/config_major1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/config_major_view1"
+                    android:inputType="number"
+                    android:labelFor="@id/config_major1"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/config_minor_view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/Major2"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/config_minor1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/config_minor_view1"
+                    android:inputType="number"
+                    android:labelFor="@id/config_minor1"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/config_rl3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/config_measured_power_view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/MeasurePower1"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/config_measured_power1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/config_measured_power_view1"
+                    android:inputType="numberSigned"
+                    android:labelFor="@id/config_measured_power1"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/config_txpower_view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/TxPower1"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/config_txpower1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/config_txpower_view1"
+                    android:inputType="numberSigned"
+                    android:labelFor="@id/config_txpower1"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" >
+
+            <TextView
+                android:id="@+id/config_encrypt_view1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/EncryptDefence1"
+                android:textSize="15sp" />
+
+            <com.skybeacon.demo.widget.CheckSwitchButton
+                android:id="@+id/config_single_encrypt_switchbutton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:checked="false"
+                android:enabled="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/config_rl4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/config_uuid_view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:text="@string/UUID2"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/config_uuid2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@id/config_uuid_view2"
+                android:hint="@string/UUIDHint"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/config_uuid_spinner2"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/config_rl5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/config_major_view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/Major2"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/config_major2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/config_major_view2"
+                    android:inputType="number"
+                    android:labelFor="@id/config_major2"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/config_minor_view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/Minor2"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/config_minor2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/config_minor_view2"
+                    android:inputType="number"
+                    android:labelFor="@id/config_minor2"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/config_rl6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/config_measured_power_view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/MeasurePower2"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/config_measured_power2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/config_measured_power_view2"
+                    android:inputType="numberSigned"
+                    android:labelFor="@id/config_measured_power2"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/config_txpower_view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/TxPower2"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/config_txpower2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/config_txpower_view2"
+                    android:inputType="numberSigned"
+                    android:labelFor="@id/config_txpower2"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" >
+
+            <TextView
+                android:id="@+id/config_encrypt_view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/EncryptDefence2"
+                android:textSize="15sp" />
+
+            <com.skybeacon.demo.widget.CheckSwitchButton
+                android:id="@+id/config_single_encrypt_switchbutton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:checked="false"
+                android:enabled="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/config_rl7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/config_uuid_view3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:text="@string/UUID3"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/config_uuid3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@id/config_uuid_view3"
+                android:hint="@string/UUIDHint"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/config_uuid_spinner3"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/config_rl8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/config_major_view3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/Major3"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/config_major3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/config_major_view3"
+                    android:inputType="number"
+                    android:labelFor="@id/config_major3"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/config_minor_view3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/Minor3"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/config_minor3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/config_minor_view3"
+                    android:inputType="number"
+                    android:labelFor="@id/config_minor3"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/config_rl9"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/config_measured_power_view3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/MeasurePower3"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/config_measured_power3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/config_measured_power_view3"
+                    android:inputType="numberSigned"
+                    android:labelFor="@id/config_measured_power3"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/config_txpower_view3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/TxPower3"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/config_txpower3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/config_txpower_view3"
+                    android:inputType="numberSigned"
+                    android:labelFor="@id/config_txpower3"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" >
+
+            <TextView
+                android:id="@+id/config_encrypt_view3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/EncryptDefence3"
+                android:textSize="15sp" />
+
+            <com.skybeacon.demo.widget.CheckSwitchButton
+                android:id="@+id/config_single_encrypt_switchbutton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:checked="false"
+                android:enabled="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/config_interval_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:text="@string/BroadcastInterval"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/config_interval"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/config_interval_view"
+                android:inputType="number"
+                android:labelFor="@id/config_interval"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/config_key_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:text="@string/ConfigKey"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/config_key"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/config_key_view"
+                android:inputType="text"
+                android:labelFor="@id/config_key"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/config_device_name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:text="@string/DeviceName"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/config_device_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/config_device_name_view"
+                android:inputType="text"
+                android:labelFor="@id/config_device_name"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" >
+
+            <TextView
+                android:id="@+id/config_lock_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/ConfigDefence"
+                android:textSize="15sp" />
+
+            <com.skybeacon.demo.widget.CheckSwitchButton
+                android:id="@+id/config_lock_switchbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:checked="false"
+                android:enabled="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/config_grid1_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/one"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/config_grid2_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/two"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/config_grid3_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/three"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/config_grid4_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/four"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/config_grid5_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/five"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/config_grid6_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/six"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/config_grid7_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/seven"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/config_grid8_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/eight"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/config_grid9_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/nine"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/config_grid1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:labelFor="@id/config_grid1"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/config_grid2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:labelFor="@id/config_grid2"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/config_grid3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:labelFor="@id/config_grid3"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/config_grid4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:labelFor="@id/config_grid4"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/config_grid5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:labelFor="@id/config_grid5"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/config_grid6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:labelFor="@id/config_grid6"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/config_grid7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:labelFor="@id/config_grid7"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/config_grid8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:labelFor="@id/config_grid8"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/config_grid9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:labelFor="@id/config_grid9"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" >
+
+            <TextView
+                android:id="@+id/config_time_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/ConfigTime"
+                android:textSize="15sp" />
+
+            <com.skybeacon.demo.widget.CheckSwitchButton
+                android:id="@+id/config_time_switchbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:checked="false"
+                android:enabled="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" >
+
+            <TextView
+                android:id="@+id/config_reset_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/Reset"
+                android:textSize="15sp" />
+
+            <com.skybeacon.demo.widget.CheckSwitchButton
+                android:id="@+id/config_reset_switchbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:checked="false"
+                android:enabled="true" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/config_command"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="#2F8f8f8f"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:text="@string/Config"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</ScrollView>

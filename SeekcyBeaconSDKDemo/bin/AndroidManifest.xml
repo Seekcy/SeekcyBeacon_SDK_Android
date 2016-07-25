@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.skybeacon.demo"
+    android:versionCode="17"
+    android:versionName="1.7.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SENSOR_INFO" />
+    <uses-permission android:name="android.permission.SENSOR_ENABLE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.skybeacon.demo.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="SEEKCY_SDK_KEY"
+            android:value="lkf13nwlkNDSN03k3kJKDFJALNK399kk" />
+
+        <service android:name="com.skybeacon.sdk.locate.BleScanService" />
+        <service android:name="com.skybeacon.sdk.config.BluetoothLeService" />
+
+        <activity
+            android:name="com.skybeacon.demo.ConfigMultiIDsActivity"
+            android:configChanges="orientation" >
+        </activity>
+        <activity
+            android:name="com.skybeacon.demo.ConfigSingleIDActivity"
+            android:configChanges="orientation" >
+        </activity>
+        <activity
+            android:name="com.skybeacon.demo.MonitorActivity"
+            android:configChanges="orientation" >
+        </activity>
+        <activity
+            android:name="com.skybeacon.demo.LocateActivity"
+            android:configChanges="orientation" >
+        </activity>
+        <activity
+            android:name="com.skybeacon.demo.ScanActivity"
+            android:configChanges="orientation" >
+        </activity>
+    </application>
+
+</manifest>

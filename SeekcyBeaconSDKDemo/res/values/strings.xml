@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SKYBeaconSDKDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="UUID">UUID</string>
+    <string name="UUID1">UUID1</string>
+    <string name="UUID2">UUID2</string>
+    <string name="UUID3">UUID3</string>
+    <string name="UUIDHint">00000000&#8211;0000&#8211;0000&#8211;0000&#8211;000000000000</string>
+    <string name="Major">Major</string>
+    <string name="Major1">Major1</string>
+    <string name="Major2">Major2</string>
+    <string name="Major3">Major3</string>
+    <string name="Minor">Minor</string>
+    <string name="Minor1">Minor1</string>
+    <string name="Minor2">Minor2</string>
+    <string name="Minor3">Minor3</string>
+    <string name="MeasurePower">MeasurePower</string>
+    <string name="MeasurePower1">MeasurePower1</string>
+    <string name="MeasurePower2">MeasurePower2</string>
+    <string name="MeasurePower3">MeasurePower3</string>
+    <string name="TxPower">TxPower</string>
+    <string name="TxPower1">TxPower1</string>
+    <string name="TxPower2">TxPower2</string>
+    <string name="TxPower3">TxPower3</string>
+    <string name="EncryptDefence">防蹭用模式</string>
+    <string name="EncryptDefence1">防蹭用模式1</string>
+    <string name="EncryptDefence2">防蹭用模式2</string>
+    <string name="EncryptDefence3">防蹭用模式3</string>
+    <string name="BroadcastInterval">发送间隔(ms)</string>
+    <string name="DeviceName">设备名称</string>
+    <string name="ConfigKey">防篡改密钥</string>
+    <string name="ConfigDefence">防篡改模式</string>
+    <string name="ConfigTime">配置时间</string>
+    <string name="Reset">恢复出厂设置</string>
+    <string name="Config">配置</string>
+    <string name="LedStatus">Led状态</string>
+    <string name="NoChange">不变</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+
+</resources>
